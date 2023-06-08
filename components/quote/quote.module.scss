@@ -1,0 +1,27 @@
+@import "/styles/globals.scss";
+
+
+.quote{
+    margin-top: $indent__xxl;
+    width: ceil(($indent__base * 30.7)); //614px;
+    @include lib-css(display, flex);
+    @include lib-css(flex-direction, column);
+    gap:24px;
+   .box{
+       border-left: $indent__xxs solid $color-yellow2;
+       padding: $indent__xs $indent__xl;
+       height: auto;
+       min-width: 100%;
+       &__text{
+           font-size: $h3__font-size + 4;
+           line-height: $indent__base + $indent__m;
+           font-weight: $font-weight__heavier;
+       }
+       &__author{
+           font-size: $font-size__s * 2;
+           line-height: $indent__l;
+           font-weight: $font-weight__bold;
+       }
+   }
+   
+}
