@@ -1,12 +1,14 @@
 "use client"
-import React from 'react';
 import styles from './quote.module.scss';
+import React, { useEffect, useState } from "react";
+
 
 
 
 export default function Quote(props) {
     let quotes = props.info;
-    console.log(quotes)
+    const [quoteRender, setQuoteRenders] = useState([]);
+
 
     let author = [];
     quotes.forEach(function(value){
@@ -14,22 +16,30 @@ export default function Quote(props) {
             author.push(value.quoteAuthor)
         }
     });
+ 
+    
 
-    let quoteRender = [];
 
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-      }
-      let x = getRandomInt(quotes.length)
+          const handleClick = () => {
+            let quoteSelected=[];
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+              }
+              let x = getRandomInt(quotes.length)
+              quotes.forEach(function(value, key){
+                if(value.quoteAuthor === author[x]){                   
+                    quoteSelected.push(value)
+                }
+            });
 
-      quotes.forEach(function(value, key){
-        if(value.quoteAuthor === author[x]){
-            quoteRender.push(value)
-        }
-    });
+            setQuoteRenders(quoteSelected)
+          };
+    
+
 
     return (
         <>
+        <button onClick={handleClick}>random</button >
             <div className={ `container ${styles.quote}`} >
                 {
                     quoteRender.map((item, index) => (
@@ -37,7 +47,7 @@ export default function Quote(props) {
                             <p className={styles.box__text}  id={item._id}>{item.quoteText}</p>
                             <p className={styles.box__author}  id={item._id}>{item.quoteAuthor}</p> 
                         </div>
-                    ))
+                   ))
                 }
             </div>
         </>
