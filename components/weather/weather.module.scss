@@ -1,0 +1,17 @@
+@import "/styles/globals.scss";
+@import "/styles/globals.css";
+
+body.weather {
+  background: $color-black;
+  color: $color-white;
+}
+
+.sidebar {
+  max-width: 459px;
+  width: 100%;
+  background: $color-sky-blue2;
+  height: 100vh;
+}
+.content {
+
+}
