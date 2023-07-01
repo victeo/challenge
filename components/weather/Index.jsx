@@ -18,7 +18,7 @@ export default function Index(props) {
 
     return (
         <>
-            <main>
+            <main className='main'>
                 <div className={styles.sidebar}>
                     <div>
                         <Button
@@ -28,19 +28,18 @@ export default function Index(props) {
                             text={text}
                             fontSize={fontSize}
                             classes={styles.sidebar_search}
-                            icon={{ name: 'LuLocateFixed', family: 'react-icons/lu' }}
                         />
                     </div>
                     <div>
                         <Button
                             backgroundColor={backgroundColor}
                             color={color}
-                            padding={'8px'}
                             borderRadius={'50%'}
+                            fontSize={'22px'}
                             height={'40px'}
                             width={'40px'}
                             classes={styles.sidebar_icon}
-                            icon={{ name: 'LuLocateFixed', family: 'react-icons/lu' }}
+                            // icon={{ name: 'LuLocateFixed', family: 'react-icons/lu' }}
                         />
                     </div>
 

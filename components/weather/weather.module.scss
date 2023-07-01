@@ -8,13 +8,19 @@ body.weather {
 
 .sidebar {
   @include lib-css(display, flex);
+  justify-content: space-between;
   max-width: 459px;
   width: 100%;
   background: $color-sky-blue2;
-  height: 100vh;
+  height: 100%;
   padding: $indent__base + $indent__m $indent__base + $indent__l;
 
   &_search{
+
+  }
+
+  &_icon{
+    padding: #{$indent__xxs + 1}  !important;
 
   }
 }

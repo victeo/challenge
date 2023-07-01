@@ -20,3 +20,10 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+.main{
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100%; /* 100% da largura do pai (por padrão, o elemento <body>) */
+    margin: 0;
+    padding: 0;
+}
