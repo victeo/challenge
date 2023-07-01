@@ -1,9 +1,9 @@
 // `pages/_app.js`
 import '../styles/globals.css';
 import '../styles/globals.scss';
-import Container from "react-bootstrap/Container";
 import Head from "next/head";
 import {useEffect} from 'react';
+
 
 export default function App({ Component, pageProps }) {
     useEffect(() => {
@@ -21,11 +21,7 @@ export default function App({ Component, pageProps }) {
                 <script src="http://localhost:8097"></script>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            
-        
-                <Container>
                 <Component {...pageProps} />
-                </Container>
         </>
     )
   }
