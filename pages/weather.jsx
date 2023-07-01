@@ -1,4 +1,4 @@
-import WeatherApi from "../api/WeatherApi/Index"
+import WeatherApi from "../api/WeatherApi/"
 
 export default function weather(){
     
