@@ -11,10 +11,12 @@ body.weather {
   justify-content: space-between;
   max-width: 459px;
   width: 100%;
-  background: $color-sky-blue2;
   height: 100%;
   padding: $indent__base + $indent__m $indent__base + $indent__l;
-
+//   background-image: url('../weather/src/img/cloud.png');
+//   background-repeat: repeat-x;
+//   background-size: contain;
+  background: url('../weather/src/img/cloud.png'), $color-sky-blue2 50% / cover no-repeat;
 
 
   &_icon{

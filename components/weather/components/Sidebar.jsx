@@ -9,6 +9,7 @@ export default function Sidebar(props) {
         <>
             <main className='main'>
                 <div className={styles.sidebar}>
+
                     <div>
                         <Button
                             backgroundColor={'#6E707A'}
