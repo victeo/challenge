@@ -11,7 +11,7 @@ export default function Index() {
         const response = axios.get('https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=60.10&lon=9.58')
         .then(response => {
           // Acessar os dados da resposta
-          console.log(response);
+        //   console.log(response);
           setWeather(response || []);
         })
         .catch(error => {
@@ -29,7 +29,7 @@ export default function Index() {
   }, []);
 
 
-  return <Weather info={weather} />;
+  return <Weather {...weather} />;
 }
 
 

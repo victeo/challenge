@@ -14,8 +14,8 @@ export default function Index(props) {
     return (
         <>
             <main className='main'>
-                <Sidebar/>
-                
+                <Sidebar {...props}/>
+             
             </main>
         </>
     )
