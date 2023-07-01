@@ -7,10 +7,16 @@ body.weather {
 }
 
 .sidebar {
+  @include lib-css(display, flex);
   max-width: 459px;
   width: 100%;
   background: $color-sky-blue2;
   height: 100vh;
+  padding: $indent__base + $indent__m $indent__base + $indent__l;
+
+  &_search{
+
+  }
 }
 .content {
 
