@@ -15,15 +15,10 @@ body.weather {
   height: 100%;
   padding: $indent__base + $indent__m $indent__base + $indent__l;
 
-  &_search{
 
-  }
 
   &_icon{
     padding: #{$indent__xxs + 1}  !important;
 
   }
-}
-.content {
-
 }

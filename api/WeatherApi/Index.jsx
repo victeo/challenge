@@ -3,7 +3,6 @@ import axios from 'axios';
 import Weather from "../../components/weather/";
 
 export default function Index() {
-    console.log('asodiaosidaisodisaodas')
   const [weather, setWeather] = useState([]);
 
   useEffect(() => {

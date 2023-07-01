@@ -1,39 +1,21 @@
 import React from 'react';
-import { LuLocateFixed } from 'react-icons/lu';
-
-export default function Button({ text, backgroundColor, color, padding, borderRadius, fontSize, classes, width, height, img, icon }) {
-    // const renderIcon = () => {
-    //     if (icon) {
-    //         const { name, family } = icon;
-    //         console.log(icon)
-    //         if (family === 'react-icons/lu') {
-    //             if (name === 'LuLocateFixed') {
-    //                 return <LuLocateFixed />;
-    //             } else if (name === 'FaUser') {
-    //                 return <FaUser />;
-    //             }
-    //         }
-    //     }
-
-    //     return null;
-    // };
-
+export default function Button(props) {
     return (
         <button
             style={{
-                backgroundColor: backgroundColor ?? 'blue',
-                color: color ?? 'black',
-                padding: padding ?? '0',
-                borderRadius: borderRadius ?? '0',
-                fontSize: fontSize ?? '12px',
-                width: width ?? 'auto',
-                height: height ?? 'auto',
-                backgroundImage: img ? `url(${img})` : '',
+                backgroundColor: props.backgroundColor,
+                color: props.color ,
+                padding: props.padding ,
+                borderRadius: props.borderRadius,
+                fontSize: props.fontSize,
+                width: props.width,
+                height: props.height,
+                backgroundImage: props.img,
             }}
-            className={classes}
+            className={props.classes}
         >
-            {/* {renderIcon()} */}
-            {text}
+            {props.children}
+            {props.text}
         </button>
     );
 }
